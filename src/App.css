@@ -1,38 +1,91 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.app{
   text-align: center;
 }
+.main{
+  
+  margin: auto;
+  width: 65vw;
+  
+  height: 60vh;
+  margin-top: 100px;
+  border-radius: 50px;
+  background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgb(5, 7, 71) 0%, rgba(7,3,53,1) 97.5% );
+  
+}
+h1{
+  text-align: center;
+  padding-top: 20px;
+  color: rgb(5, 30, 53);
+}
+.main2{
+  height: 50vh;
+ width: 60vw;
+ margin: auto;
+ position: absolute;
+ margin-top: 2.5vw;
+ margin-left: 20vw;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+ background-image: radial-gradient( circle 976px at 51.2% 51%,  rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );
+ border-radius: 50px;
+  
+}
+.main2 img{
+ cursor: pointer;
+ background-color: rgb(241, 250, 250);
+  padding: 15px ;
+  border-radius: 50px;
+ 
+}
+#minus{
+  padding: 30px 15px;
+  border-radius: 50 px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+}
+input{
+  background:transparent;
+  border: none;
+ /* width: 100px; */
+  text-align: center;
+  font-size: 50px;
+  color: black;
+}
+input:focus{
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.re{
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.re button{
+  border: 1px solid black;
+  padding: 10px 40px;
+  border-radius: 30px;
+  background-image: linear-gradient( 117deg,  rgb(18, 24, 102) 39.2%, rgb(78, 22, 22) 156.2% );
+  cursor: pointer;
   color: white;
+ 
+}
+button{
+  border: none;
+  background: transparent;
 }
 
-.App-link {
-  color: #61dafb;
+span{
+  padding: 20px;
+  font-size: 20px;
+  background-color: white;
+
+  border-radius: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

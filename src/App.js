@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { incNumber } from "./actions";
+import { decNumber } from "./actions";
+import { reSet } from "./actions";
 
-function App() {
+import { useSelector, useDispatch } from "react-redux";
+
+import minu from "./images/minus.png";
+import plu from "./images/plus.png";
+
+const App = () => {
+  const changeNumber = useSelector((state) => state.changeNumber);
+  const dispatch = useDispatch();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <>
+      <div className="main2">
+        <a href onClick={() => dispatch(decNumber())}>
+          <img id="minus" src={minu} alt="decrement"></img>
         </a>
-      </header>
-    </div>
+        <input type="text" value={changeNumber} />
+        <a href onClick={() => dispatch(incNumber(5))}>
+          <img src={plu} alt="increment"></img>
+        </a>
+      </div>
+
+      <div className="main"></div>
+      <div className="re">
+        <button on onClick={() => dispatch(reSet())}>
+          Reset
+        </button>
+      </div>
+      <h1>Increment/Decrement counter</h1>
+    </>
   );
-}
+};
 
 export default App;
